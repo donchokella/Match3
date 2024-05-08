@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class OptionsMenu : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class OptionsMenu : MonoBehaviour
     private int selectedResolution;
 
     public TextMeshProUGUI resolutionLabel;
+
+    public AudioMixer theMixer;
+
+    public Slider masterSlider, musicSlider, sfxSlider;
+    public TextMeshProUGUI masterLabel, musicLabel, sfxLabel;
 
     private void Start()
     {
@@ -89,6 +95,27 @@ public class OptionsMenu : MonoBehaviour
 
         // Set resolution
         Screen.SetResolution(resolutions[selectedResolution].horizontal, resolutions[selectedResolution].vertical, fullscreenTog.isOn);
+    }
+
+    public void SetMasterVolume()
+    {
+        masterLabel.text = (masterSlider.value + 80).ToString();
+
+        theMixer.SetFloat("MasterVol", masterSlider.value);
+    }
+
+    public void SetMusicVolume()
+    {
+        musicLabel.text = (musicSlider.value + 80).ToString();
+
+        theMixer.SetFloat("MusicVol", musicSlider.value);
+    }
+
+    public void SetSFXVolume()
+    {
+        sfxLabel.text = (sfxSlider.value + 80).ToString();
+
+        theMixer.SetFloat("SFXVol", sfxSlider.value);
     }
 }
 
