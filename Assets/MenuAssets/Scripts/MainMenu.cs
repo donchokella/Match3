@@ -5,6 +5,8 @@ public class MainMenu : MonoBehaviour
 {
     public string firstLevel;
 
+    public GameObject optionsScreen;
+
     
 
     public void StartGame()
@@ -14,12 +16,12 @@ public class MainMenu : MonoBehaviour
 
     public void OpenOptions()
     {
-
+        optionsScreen.SetActive(true);
     }
     
     public void CloseOptions()
     {
-
+        optionsScreen.SetActive(false);
     }
 
     public void QuitGame()
