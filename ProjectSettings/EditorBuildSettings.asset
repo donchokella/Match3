@@ -12,8 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 7c6a33731b190da4db7fe572744c54e6
   - enabled: 1
-    path: Assets/Udemy UI Starter/Pause Scene/Pause Setup.unity
+    path: Assets/MenuAssets/Udemy UI Starter/Pause Scene/Pause Setup.unity
     guid: d18591eb04466fd428794a14431f387f
   m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 086310a5bc08543439197a554c4b087d, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: abfc50568cd094ab2a57f0b3510d3384, type: 3}
   m_UseUCBPForAssetBundles: 0
